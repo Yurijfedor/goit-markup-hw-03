@@ -7,10 +7,6 @@
   --adress-link-color: rgba(255, 255, 255, 0.6);
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
@@ -31,6 +27,10 @@ body {
 
 /* logo */
 
+.page-header {
+  background-color: #ccc;
+}
+
 .logo {
   color: var(--logo-color);
   font-family: Raleway, sans-serif;
@@ -50,11 +50,33 @@ span.accent {
 
 /* site nav */
 
+.container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+
+  background-color: #ccc;
+}
+
+.nav {
+  display: flex;
+}
+
 .site-nav {
   display: flex;
 }
 
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   font-family: Roboto;
   font-weight: 500;
@@ -72,6 +94,18 @@ span.accent {
   color: var(--accent-color);
 }
 
+/* auth-nav */
+
+.auth-nav {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.auth-nav .item + .item {
+  margin-left: 50px;
+}
+
 .auth-nav .link {
   color: var(--primary-text-color);
   font-style: normal;
@@ -86,27 +120,42 @@ span.accent {
   color: var(--accent-color);
 }
 
+/* main */
 /* index.html */
 /* hero */
 
+.hero {
+  text-align: center;
+  /* margin-bottom: 94px; */
+}
+
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  background-color: var(--primary-text-color);
 }
 
 .hero .button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -115,6 +164,9 @@ span.accent {
 /* section */
 
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -123,9 +175,21 @@ span.accent {
   letter-spacing: 0.03em;
 }
 
+.section-title-hidden {
+  display: none;
+}
+
 /* peculiarities */
 
+.peculiarities-list {
+  margin-top: 0;
+  margin-bottom: 94px;
+}
+
 .peculiarities-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -134,7 +198,26 @@ span.accent {
   text-transform: uppercase;
 }
 
+.peculiarities-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.work-list {
+  margin-top: 0;
+  margin-bottom: 94px;
+}
+
 /* team */
+
+.section-padding {
+  padding: 94px 0;
+}
+
+.team-list {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .team-list .title {
   color: var(--title-text-color);
@@ -160,6 +243,7 @@ span.accent {
   background-color: var(--primary-white-color);
   border-color: transparent;
   cursor: pointer;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -195,8 +279,19 @@ button:focus {
 
 /* footer */
 
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .logo {
+  margin-bottom: 20px;
+}
+
 .address {
   color: var(--primary-white-color);
+
+  background-color: rgb(66, 72, 80);
 }
 
 .address .link {
