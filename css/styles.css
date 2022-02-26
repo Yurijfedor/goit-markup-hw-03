@@ -51,13 +51,13 @@ span.accent {
 /* site nav */
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
 
-  background-color: #ccc;
+  /* background-color: #ccc; */
 }
 
 .nav {
@@ -126,7 +126,7 @@ span.accent {
 
 .hero {
   text-align: center;
-  /* margin-bottom: 94px; */
+  margin-bottom: 94px;
 }
 
 .hero-title {
@@ -234,8 +234,24 @@ span.accent {
 /* portfolio.html */
 /* examples */
 
-.examples .examples-title {
+.examples {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
+
+.filter {
+  margin-bottom: 34px;
+}
+
+.examples-title {
+  margin-top: 0;
   color: var(--title-text-color);
+  display: none;
+}
+
+.examples-filter {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .button {
@@ -254,6 +270,11 @@ button:hover,
 button:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+}
+
+.example-list {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .example-list .title {

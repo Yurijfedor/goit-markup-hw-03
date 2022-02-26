@@ -14,24 +14,27 @@
 </head>
 <body>
     <div class="container">
-        <Header>
-            <nav class="nav">
-                <a lang="en" href="" class="logo link"><span class="accent">Web</span>Studio</a> 
-
-                <ul class="site-nav list">
-                    <li><a href="./index.html" class="link">Студия</a></li>
-                    <li><a href="./portfolio.html" class="link current">Портфолио</a></li>
-                    <li><a href="" class="link">Контакты</a></li>
-                </ul>
-            </nav>
-
+        <Header class="page-header">
+            <div class="container-menu">
+                <nav class="container nav">
+                    <a lang="en" href="" class="logo link"><span class="accent">Web</span>Studio</a>
+        
+                    <ul class="site-nav list">
+                        <li class="item"><a href="./index.html" class="link">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
+                        <li class="item"><a href="" class="link">Контакты</a></li>
+                    </ul>
+                </nav>
+        
                 <ul class="auth-nav list">
-                    <li> <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-                    <li> <a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+                    <li class="item"> <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+                    <li class="item"> <a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
                 </ul>
-        </Header> 
+            </div>
+        </Header>
         <main>
             <article class="examples">
+                <div class="filter">
                     <h1 class="examples-title">Портфолио</h1>
                     <ul class="examples-filter list">
                         <li><button type="button" class="button">>Все</a></li>
@@ -40,7 +43,8 @@
                         <li><button type="button" class="button">>Дизайн</a></li>
                         <li><button type="button" class="button">>Маркетинг</a></li>
                     </ul>
-                    
+                </div>
+                <div class="cards">    
                     <ul class="example-list list">
                         <li>
                             <a href="" class="example-link">
@@ -116,18 +120,19 @@
                         </li>
 
                     </ul>
+                </div>  
             </article>
         </main>
-        <footer>
-            <div>
-                <a lang="en" href="/" class="logo link"><span class="accent">Web</span>Studio</a> 
-                <address class="address">
-                    г. Киев, пр-т Леси Украинки, 26
-                    <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
-                    <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
-                </address>
-            </div>
-        </footer>  
+            <footer>
+                <div class="footer">
+                    <a lang="en" href="/" class="logo link"><span class="accent">Web</span>Studio</a>
+                    <address class="address">
+                        г. Киев, пр-т Леси Украинки, 26<br>
+                        <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a><br>
+                        <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+                    </address>
+                </div>
+            </footer>
     </div>
 </body>
 </html>
