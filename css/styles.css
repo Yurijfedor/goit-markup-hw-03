@@ -6,6 +6,8 @@
   --logo-color: #000000;
   --adress-link-color: rgba(255, 255, 255, 0.6);
   --secondary-bg-color: #f5f4fa;
+  --card-set-gap: 30px;
+  --border-color: #eeeeee;
 }
 
 body {
@@ -16,6 +18,11 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
   line-height: 1.71;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 .list {
@@ -137,7 +144,7 @@ span.accent {
 
 .hero {
   text-align: center;
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 .hero-title {
@@ -192,11 +199,16 @@ span.accent {
 
 /* peculiarities */
 
+.peculiarities {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
 .peculiarities-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
   padding-inline-start: 0;
 }
 
@@ -228,6 +240,11 @@ span.accent {
 
 /* work-list */
 
+.work {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
 .work-list {
   display: flex;
   flex-wrap: wrap;
@@ -246,8 +263,9 @@ span.accent {
 
 /* team */
 
-.section-padding {
-  padding: 94px 0;
+.team {
+  padding-top: 0;
+  padding-bottom: 94px;
 }
 
 .team-list {
@@ -279,16 +297,12 @@ span.accent {
 }
 
 /* portfolio.html */
-/* examples */
+/* section */
 /* filter */
 
-.examples {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
-
-.examples-title {
-  display: none;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .filter {
@@ -332,27 +346,20 @@ button:focus {
   margin-top: 0;
   margin-bottom: 0;
   padding-inline-start: 0;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .card-set .item {
-  max-width: 370px;
-  margin-bottom: 30px;
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
   background: #ffffff;
-  border: 1px solid #eeeeee;
 }
 
-.card-set .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-}
-
-.card-set .item:not(:nth-child(3n)) {
-  margin-right: 30px;
-}
-
-.link .title {
-  margin-top: 20px;
+.card-heading {
+  margin-top: 0;
   margin-bottom: 4px;
-  margin-left: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -360,13 +367,17 @@ button:focus {
   color: var(--title-text-color);
 }
 
-.link .text {
+.card-text {
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
   margin-top: 0;
-  margin-bottom: 20px;
-  margin-left: 24px;
   color: var(--primary-text-color);
+}
+
+.card-content {
+  padding: 20px 24px;
+  border: 1px solid var(--border-color);
 }
 
 /* footer */
