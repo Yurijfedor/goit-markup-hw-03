@@ -27,13 +27,23 @@ img {
 
 .list {
   list-style: none;
+  padding-inline-start: 0;
 }
 
 .link {
   text-decoration: none;
 }
 
+.section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .container {
+  display: flex;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -42,10 +52,27 @@ img {
   align-items: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+/* --------------------------HEADER------------------------------------ */
 /* logo */
 
 .page-header {
   display: flex;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -112,7 +139,6 @@ span.accent {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
-  /* justify-content: flex-end; */
 }
 
 .contacts .item + .item {
@@ -138,13 +164,21 @@ span.accent {
   color: var(--accent-color);
 }
 
-/* main */
+/*------------------------------MAIN----------------------------------------- */
 /* index.html */
 /* hero */
 
 .hero {
   text-align: center;
-  padding-bottom: 94px;
+}
+
+.overlay {
+  padding-top: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2f303a;
 }
 
 .hero-title {
@@ -157,8 +191,6 @@ span.accent {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  background-color: var(--primary-text-color);
 }
 
 .hero .button {
@@ -193,18 +225,17 @@ span.accent {
   letter-spacing: 0.03em;
 }
 
-.section-title-hidden {
-  display: none;
+/* advantage */
+
+.section-advantage {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 0;
 }
 
-/* peculiarities */
-
-.peculiarities {
-  padding-top: 0;
-  padding-bottom: 94px;
-}
-
-.peculiarities-list {
+.advantage-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
@@ -212,16 +243,16 @@ span.accent {
   padding-inline-start: 0;
 }
 
-.peculiarities-list .item {
+.advantage-list .item {
   width: 270px;
   margin-right: 30px;
 }
 
-.peculiarities-list .item:nth-child(4n) {
+.advantage-list .item:nth-child(4n) {
   margin-right: 0;
 }
 
-.peculiarities-list .title {
+.advantage-list .title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -233,23 +264,17 @@ span.accent {
   text-transform: uppercase;
 }
 
-.peculiarities-list .text {
+.advantage-list .text {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 /* work-list */
 
-.work {
-  padding-top: 0;
-  padding-bottom: 94px;
-}
-
 .work-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: 0;
-  margin-bottom: 94px;
   padding-inline-start: 0;
 }
 
@@ -264,8 +289,12 @@ span.accent {
 /* team */
 
 .team {
-  padding-top: 0;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
   padding-bottom: 94px;
+  background-color: var(--secondary-bg-color);
 }
 
 .team-list {
@@ -310,7 +339,7 @@ span.accent {
   text-align: center;
 }
 
-/* portfolio.html */
+/* ----------------------------PORTFOLIO.HTML------------------------------------- */
 /* section */
 /* filter */
 
@@ -391,33 +420,42 @@ button:focus {
 
 .card-content {
   padding: 20px 24px;
-  border: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
-/* footer */
+/*------------------------------------FOOTER------------------------------------ */
 
 .footer {
+  max-width: 1600px;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2f303a;
+}
+
+.address {
+  display: block;
 }
 
 .footer .logo {
   margin-bottom: 20px;
 }
 
-.address {
+.footer-address {
   color: var(--primary-white-color);
   font-style: normal;
-
-  background-color: rgb(66, 72, 80);
 }
 
-.address .link {
+.footer-address .link {
   color: var(--adress-link-color);
   font-style: normal;
 }
 
-.address .link:hover,
-.address .link:focus {
+.footer-address .link:hover,
+.footer-address .link:focus {
   color: var(--accent-color);
 }
