@@ -20,14 +20,33 @@ body {
   line-height: 1.71;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
-.list {
+ul,
+ol {
   list-style: none;
   padding-inline-start: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .link {
@@ -35,21 +54,16 @@ img {
 }
 
 .section {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
 .container {
-  display: flex;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  align-items: center;
 }
 
 .visually-hidden {
@@ -68,11 +82,11 @@ img {
 /* logo */
 
 .page-header {
-  display: flex;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
   border-bottom: 1px solid #ececec;
+}
+
+.page-header .container {
+  display: flex;
 }
 
 .logo {
@@ -96,13 +110,11 @@ span.accent {
 
 .nav {
   display: flex;
+  align-items: center;
 }
 
 .site-nav {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-inline-start: 0;
   margin-left: 93px;
 }
 
@@ -110,13 +122,14 @@ span.accent {
   margin-left: 50px;
 }
 
-.site-nav .link {
+.page-header .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+}
 
+.site-nav .link {
   color: var(--title-text-color);
-  font-family: Roboto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -136,8 +149,6 @@ span.accent {
 
 .contacts {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 0;
   margin-left: auto;
 }
 
@@ -146,17 +157,7 @@ span.accent {
 }
 
 .contacts .link {
-  display: block;
-  min-width: 122px;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   color: var(--primary-text-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 
 .contacts .link:hover,
@@ -170,21 +171,14 @@ span.accent {
 
 .hero {
   text-align: center;
-}
-
-.overlay {
-  padding-top: 200px;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
-
+  width: 696px;
+  margin: 0 auto 30px auto;
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
@@ -214,7 +208,6 @@ span.accent {
 /* section*/
 
 .section-title {
-  margin-top: 0;
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -226,14 +219,6 @@ span.accent {
 }
 
 /* advantage */
-
-.section-advantage {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 94px;
-  padding-bottom: 0;
-}
 
 .advantage-list {
   display: flex;
@@ -253,7 +238,6 @@ span.accent {
 }
 
 .advantage-list .title {
-  margin-top: 0;
   margin-bottom: 10px;
 
   color: var(--title-text-color);
@@ -264,18 +248,14 @@ span.accent {
   text-transform: uppercase;
 }
 
-.advantage-list .text {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 /* work-list */
+
+.work {
+  padding-top: 0;
+}
 
 .work-list {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 0;
-  padding-inline-start: 0;
 }
 
 .work-list .item {
@@ -289,11 +269,6 @@ span.accent {
 /* team */
 
 .team {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 94px;
-  padding-bottom: 94px;
   background-color: var(--secondary-bg-color);
 }
 
@@ -319,10 +294,10 @@ span.accent {
 .item-content {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--primary-white-color);
 }
 
 .team-list .title {
-  margin-top: 0;
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
@@ -332,8 +307,6 @@ span.accent {
 }
 
 .team-list .text {
-  margin-top: 0;
-  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -343,17 +316,10 @@ span.accent {
 /* section */
 /* filter */
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .filter {
   display: flex;
   justify-content: center;
-  margin-top: 0;
   margin-bottom: 50px;
-  padding-inline-start: 0;
 }
 
 .filter .item + .item {
@@ -388,9 +354,6 @@ button:focus {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-inline-start: 0;
   margin-left: calc(-1 * var(--card-set-gap));
   margin-top: calc(-1 * var(--card-set-gap));
 }
@@ -403,7 +366,6 @@ button:focus {
 }
 
 .card-heading {
-  margin-top: 0;
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -413,10 +375,8 @@ button:focus {
 }
 
 .card-text {
-  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
-  margin-top: 0;
   color: var(--primary-text-color);
 }
 
@@ -430,12 +390,8 @@ button:focus {
 /*------------------------------------FOOTER------------------------------------ */
 
 .footer {
-  max-width: 1600px;
   padding-top: 60px;
   padding-bottom: 60px;
-
-  margin-left: auto;
-  margin-right: auto;
   background-color: #2f303a;
 }
 
@@ -444,7 +400,19 @@ button:focus {
 }
 
 .footer .logo {
-  margin-bottom: 20px;
+  color: var(--primary-white-color);
+}
+
+.footer-list {
+  margin-top: 20px;
+}
+
+.footer-list .item {
+  margin-bottom: 9px;
+}
+
+.footer-list .text {
+  margin-bottom: 9px;
 }
 
 .footer-address {
@@ -453,6 +421,7 @@ button:focus {
 }
 
 .footer-address .link {
+  margin-bottom: 20px;
   color: var(--adress-link-color);
   font-style: normal;
 }
