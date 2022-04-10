@@ -124,8 +124,8 @@ span.accent {
 
 .page-header .link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .site-nav .link {
@@ -411,8 +411,8 @@ button:focus {
   margin-bottom: 9px;
 }
 
-.footer-list .text {
-  margin-bottom: 9px;
+.footer-list .item:last-child {
+  margin-bottom: 0;
 }
 
 .footer-address {
